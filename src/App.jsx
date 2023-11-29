@@ -1,5 +1,7 @@
 
 function App() {
+  // Comentário de uma linha CTRL;
+  /* Comentário de várias linhas */
   return <>
   <header>
   <h1>Olá React!</h1>
