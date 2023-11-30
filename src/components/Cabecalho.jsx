@@ -8,7 +8,6 @@ function Cabecalho() {
       <h1>
         Olá <span className={style.sombra}>React!</span>
       </h1>
-      <hr />
       <Menu />
     </header>
   );
