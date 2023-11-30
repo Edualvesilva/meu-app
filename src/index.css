@@ -27,5 +27,11 @@ body {
 
 /* Bloco/box */
 .sombra {
-  box-shadow: red 0 0 10px;
+  box-shadow: white 0 10px;
+}
+
+.destaque-texto {
+  background-color: yellow;
+  padding: 4px;
+  border-radius: 4px;
 }

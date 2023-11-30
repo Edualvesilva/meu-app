@@ -11,7 +11,7 @@ function Footer() {
   return (
     <footer style={ExemploEstilos}>
       <h2 style={{ textAlign: "center" }}>Rodapé da aplicação</h2>
-      <p>Fundamentos do React</p>
+      <p className="destaque-texto">Fundamentos do React</p>
       <p>
         {/* Classname porque class é para Orientação a Objeto em JS */}
         Experimentando <b className="sombra">Classes</b>
