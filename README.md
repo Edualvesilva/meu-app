@@ -14,5 +14,6 @@ index.html <- main.jsx <- App.jsx
 
 - CSS in JS
   - CSS inline: aplicado via atributo style tag usando sintaxe JS, ou seja, objeto com propriedades.
+- CSS externo e Global
 
 ---
