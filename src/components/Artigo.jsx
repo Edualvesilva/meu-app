@@ -3,7 +3,7 @@ function Artigo() {
   return (
     <>
       <h3>Artigo </h3>
-      <p className={estileira["artigo-colorido"]}>Conteúdo do artigo </p>
+      <p className={`${estileira["artigo-colorido"]}`}>Conteúdo do artigo</p>
     </>
   );
 }
