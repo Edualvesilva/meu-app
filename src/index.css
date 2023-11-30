@@ -13,7 +13,8 @@ body,
 h1,
 h2,
 p {
-  all: unset;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -22,4 +23,9 @@ html {
 
 body {
   font-family: "Segoe UI", "Arial";
+}
+
+/* Bloco/box */
+.sombra {
+  box-shadow: red 0 0 10px;
 }
