@@ -10,6 +10,9 @@ function Cabecalho() {
         <span className={style.sombra}>React!</span>
       </h1>
       <Menu />
+      <p className={`${style["destaque-texto"]} centralizar`}>
+        Classes combinadas
+      </p>
     </header>
   );
 }
