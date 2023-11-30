@@ -16,3 +16,7 @@ hr {
 .destaque-texto {
   text-transform: uppercase;
 }
+
+.artigo-colorido {
+  background-color: gray;
+}
