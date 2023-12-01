@@ -12,6 +12,17 @@ const StyleMain = styled.main`
   p {
     padding: 0.5rem 0;
   }
+
+  @media screen and (min-width: 650px) {
+    .artigos {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .artigos article {
+      width: 32%;
+    }
+  }
 `;
 function Conteudo() {
   return (
@@ -23,9 +34,11 @@ function Conteudo() {
         impedit voluptatibus inventore temporibus pariatur quidem! Accusantium
         architecto veritatis velit rerum?
       </p>
-      <Artigo />
-      <Artigo />
-      <Artigo />
+      <div className="artigos">
+        <Artigo />
+        <Artigo />
+        <Artigo />
+      </div>
     </StyleMain>
   );
 }
