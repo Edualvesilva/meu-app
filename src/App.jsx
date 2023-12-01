@@ -3,15 +3,14 @@ import Conteudo from "./components/Conteudo";
 import Footer from "./components/Footer";
 
 function App() {
-
   return (
     <>
-    <Cabecalho />
-   
+      <Cabecalho />
+
       <hr />
       <Conteudo />
-  
-   <Footer />
+
+      <Footer />
     </>
   );
 }
