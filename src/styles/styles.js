@@ -6,3 +6,49 @@ export const StyledFooter = styled.footer`
   justify-content: center;
   align-items: center;
 `;
+
+export const StyledMenu = styled.nav`
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  a {
+    color: white;
+    text-decoration: none;
+    width: 30%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 100ms;
+    /* reference to the parent selector */
+    &:hover {
+      color: black;
+      background-color: pink;
+    }
+  }
+`;
+
+export const StyleMain = styled.main`
+  width: 90vw;
+  margin: 1rem auto;
+  background-color: aliceblue;
+  padding: 1rem;
+  box-shadow: darkblue 0 0 1px inset;
+
+  h2,
+  p {
+    padding: 0.5rem 0;
+  }
+
+  @media screen and (min-width: 650px) {
+    .artigos {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .artigos article {
+      width: 32%;
+    }
+  }
+`;

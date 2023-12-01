@@ -1,29 +1,6 @@
-import styled from "styled-components";
+import { StyleMain } from "../styles/styles.js";
 import Artigo from "./Artigo";
 
-const StyleMain = styled.main`
-  width: 90vw;
-  margin: 1rem auto;
-  background-color: aliceblue;
-  padding: 1rem;
-  box-shadow: darkblue 0 0 1px inset;
-
-  h2,
-  p {
-    padding: 0.5rem 0;
-  }
-
-  @media screen and (min-width: 650px) {
-    .artigos {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .artigos article {
-      width: 32%;
-    }
-  }
-`;
 function Conteudo() {
   return (
     <StyleMain>
