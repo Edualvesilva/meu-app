@@ -1,6 +1,8 @@
 import { StyleMain } from "../styles/styles.js";
 import Artigo from "./Artigo";
 
+const data = ["10-09-2010", "09-06-2007", "01-01-1969"];
+
 function Conteudo() {
   return (
     <StyleMain>
@@ -12,9 +14,24 @@ function Conteudo() {
         architecto veritatis velit rerum?
       </p>
       <div className="artigos">
-        <Artigo />
-        <Artigo />
-        <Artigo />
+        <Artigo
+          icone="🧨"
+          titulo="Senhor dos Anéis"
+          descricao="Um dos filmes criados"
+          data={data[0]}
+        />
+        <Artigo
+          icone="🚬"
+          titulo="Breaking bad"
+          descricao="Melhor série do mundo"
+          data={data[1]}
+        />
+        <Artigo
+          icone="🕷🕸"
+          titulo="Homem Aranha"
+          descricao="Herói e Tals"
+          data={data[2]}
+        />
       </div>
     </StyleMain>
   );

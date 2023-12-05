@@ -12,11 +12,17 @@ const StyledArtigo = styled.article`
     font-size: 1.1rem;
   }
 `;
-function Artigo() {
+
+/* Definindo props para o componente */
+function Artigo(props) {
   return (
     <StyledArtigo>
-      <h3>Artigo </h3>
-      <p>Conteúdo do artigo </p>
+      <h3>
+        <span>{props.icone}</span>
+        {props.titulo}
+      </h3>
+      <p> {props.descricao} </p>
+      <time>{props.data}</time>
     </StyledArtigo>
   );
 }
