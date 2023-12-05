@@ -1,5 +1,13 @@
 # Fundamentos de React
 
+## 06-props
+
+São parâmetros/argumentos com valores/expressões passados para os componentes React, normalmente usados para injeção de dados dinâmicos. As `props` funcionam como objetos, e cada `prop` criada por você passa a ter propriedades deste objeto.
+
+As `props` são criadas manualmente, embora também exista uma `prop` especial chamada `children` que permite ler/transmitir o conteúdo que fica entre as tags de abertura/fechamento de um componente.
+
+---
+
 ## 00-projeto-resetado
 
 ## Informações gerais
