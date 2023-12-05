@@ -1,4 +1,4 @@
-import { StyledMenu } from "../styles/styles.js";
+import { StyledMenu } from "./styles/styles.js";
 
 function Menu() {
   return (

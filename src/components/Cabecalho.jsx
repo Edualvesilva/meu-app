@@ -1,4 +1,4 @@
-import Menu from "./Menu";
+import Menu from "../Menu";
 
 /* Importação da lib Styled Components */
 import styled from "styled-components";
