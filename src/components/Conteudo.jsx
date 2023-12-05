@@ -18,6 +18,7 @@ function Conteudo() {
         {cursos.map((curso) => {
           return (
             <Artigo
+              key={curso.id}
               categoria={curso.categoria}
               titulo={curso.titulo}
               preco={curso.preco}
