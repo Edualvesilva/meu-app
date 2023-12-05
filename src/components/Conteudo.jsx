@@ -25,21 +25,49 @@ function Conteudo() {
           descricao="Um dos filmes criados"
           data={data[0]}
           imagem={imagem1}
-        />
+        >
+          <h4>Volumes</h4>
+          <ul>
+            <li>A Sociedade do Anel</li>
+            <li>As Duas Torres</li>
+            <li>O Retorno do Rei</li>
+          </ul>
+        </Artigo>
+
         <Artigo
           icone="🚬"
           titulo="Breaking bad"
           descricao="Melhor série do mundo"
           data={data[1]}
           imagem={imagem2}
-        />
+        >
+          <h4>Defuntos da Serie</h4>
+          <ul>
+            <li>Hank</li>
+            <li>Saul GoodMan</li>
+            <li>Walter White</li>
+          </ul>
+        </Artigo>
         <Artigo
           icone="🕷🕸"
           titulo="Homem Aranha"
           descricao="Herói e Tals"
           data={data[2]}
           imagem={imagem3}
-        />
+        >
+          <section>
+            <h4>Assuntos</h4>
+            <details>
+              <summary>Estrutura</summary>
+              <p>Spider-man issue 0</p>
+            </details>
+
+            <details>
+              <summary>Filmes</summary>
+              <p>Spider-man 1 - Tobey Maguire</p>
+            </details>
+          </section>
+        </Artigo>
       </div>
     </StyleMain>
   );
