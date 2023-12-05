@@ -30,6 +30,8 @@ function Artigo(props) {
       <div className="centralizar">
         <img src={props.imagem} alt="" />
       </div>
+
+      {props.children}
     </StyledArtigo>
   );
 }
