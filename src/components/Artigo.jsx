@@ -20,11 +20,14 @@ const StyledArtigo = styled.article`
 const formataPreco = (valor) => {
   return valor.toLocaleString("pt-br", { style: "currency", currency: "BRL" });
 };
-/* Definindo props para o componente */
+
 function Artigo(props) {
   return (
     <StyledArtigo>
-      <h3>Categoria: {props.categoria}</h3>
+      {/* O Componente filho (Artigo) recebe
+      atráves da prop 'handleClick' a referência à
+      função exemplo 3 existente no componente pai (Conteudo) */}
+      <h3 onClick={props.handleClick}>Categoria: {props.categoria}</h3>
       <p>Nome do Curso: {props.titulo} </p>
       <p>Preço: {formataPreco(props.preco)}</p>
     </StyledArtigo>
