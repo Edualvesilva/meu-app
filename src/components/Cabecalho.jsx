@@ -22,7 +22,14 @@ const StyledHeader = styled.header`
 function Cabecalho() {
   return (
     <StyledHeader>
-      <h1>Olá React!</h1>
+      <h1
+        onClick={
+          /* Propriedade de evento que executará,após o clique, uma função intermediária que fará ações (chamar outras funções,executar outros processos etc ) */
+          () => alert("Exemplo 1")
+        }
+      >
+        Olá React!
+      </h1>
       <hr />
       <Menu />
     </StyledHeader>
