@@ -28,9 +28,12 @@ function Cabecalho() {
   
   */
   const [titulo, setTitulo] = useState("Olá React!");
+  const mudarTitulo = () => {
+    setTitulo("Mudei! 😎");
+  };
   return (
     <StyledHeader>
-      <h1>{titulo}</h1>
+      <h1 onClick={mudarTitulo}>{titulo}</h1>
       <hr />
       <Menu />
     </StyledHeader>
