@@ -1,4 +1,4 @@
-import { StyleMain } from "../styles/styles.js";
+import { StyleCursos } from "../styles/styles.js";
 import Artigo from "./Artigo.jsx";
 
 import cursos from "../api/cursos.js";
@@ -29,7 +29,7 @@ function Cursos() {
   const quantidade = cursosFiltrados.length;
 
   return (
-    <StyleMain>
+    <StyleCursos>
       <h2>Conteúdo da aplicação</h2>
 
       <p>
@@ -80,7 +80,7 @@ function Cursos() {
           );
         })}
       </div>
-    </StyleMain>
+    </StyleCursos>
   );
 }
 export default Cursos;

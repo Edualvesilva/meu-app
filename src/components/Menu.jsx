@@ -1,11 +1,11 @@
 import { StyledMenu } from "../styles/styles.js";
-
+import { NavLink } from "react-router-dom";
 function Menu() {
   return (
     <StyledMenu>
-      <a href="">Home</a>
-      <a href="">Produtos</a>
-      <a href="">Contato</a>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/produtos">Produtos</NavLink>
+      <NavLink to="/contato">Contato</NavLink>
     </StyledMenu>
   );
 }

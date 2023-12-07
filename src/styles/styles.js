@@ -29,7 +29,7 @@ export const StyledMenu = styled.nav`
   }
 `;
 
-export const StyleMain = styled.main`
+export const StyleCursos = styled.section`
   width: 90vw;
   margin: 1rem auto;
   background-color: aliceblue;
