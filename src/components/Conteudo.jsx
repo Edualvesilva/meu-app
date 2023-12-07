@@ -16,6 +16,16 @@ function Conteudo() {
     setCategoria(categoriaSelecionada);
   };
 
+  const limparFiltro = (categorias) => {
+    setCategoria(null);
+  };
+
+  /* Gerando um novo array de cursos filtrados */
+  const cursosFiltrados = cursos.filter((curso) => {
+    /* Se o state categoria for igual a uma das categorias dos cursos, então será retornada a lista de cursos daquela categoria. Senão,será retornada lista completa devido ao state ser null (ou seja, =não há uma categoria para filtrar) */
+    return curso.categoria === categoria || categoria === null;
+  });
+
   return (
     <StyleMain>
       <h2>Conteúdo da aplicação</h2>
@@ -30,9 +40,13 @@ function Conteudo() {
       <div className="filtros">
         <p>
           <b>Filtrar por: </b>
-          <button onClick={aplicarFiltro}>Front-end</button>
-          <button onClick={aplicarFiltro}>Back-end</button>
+          <button onClick={aplicarFiltro}>Front-End</button>
+          <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
+          <button onClick={aplicarFiltro}>Mobile</button>
+          {categoria && (
+            <button onClick={limparFiltro}>🧹 Limpar Filtro</button>
+          )}
         </p>
 
         {/* Renderização Condicional o texto/tag/componente somente será renderizaso/exibido se o state categoria existir (ou seja,não é null,undefined,false) */}
@@ -44,7 +58,7 @@ function Conteudo() {
       </div>
 
       <div className="artigos">
-        {cursos.map((curso) => {
+        {cursosFiltrados.map((curso) => {
           return (
             <Artigo
               key={curso.id}
