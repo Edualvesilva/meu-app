@@ -1,5 +1,13 @@
 # Fundamentos de React
 
+## 12-nevegação-usando-rotas
+
+O React suporta a navegação/links como Single Page Application (SPA) usando uma biblioteca adicional chamada **React Router DOM**.
+
+Portanto, é necessário instalar esta dependência:
+
+`npm install react-router-dom`
+
 ## 10-gerenciamento-de-estados-dos-componentes
 
 `Estado` ou `state` é uma propriedade especial de um componente que pode ser alterada ao longo do tempo. Por exe,plo, um componente que exibe um contador de **likes** precisa de um gerenciamento de `states` para controlar a quantidade de **likes** recebidos.
