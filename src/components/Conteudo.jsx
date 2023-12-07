@@ -2,34 +2,47 @@ import { StyleMain } from "../styles/styles.js";
 import Artigo from "./Artigo";
 
 import cursos from "../api/cursos.js";
+import { useState } from "react";
 
 function Conteudo() {
-  /* Função que será chamada a partir do evento acionado por um componente/elemento. */
-  const exemplo2 = () => {
-    alert("Exemplo 2");
+  /* Criando gerenciador de state para mudanças de categorias. Inicialmente começa como null pois ainda não temos uma escolha/seleção de categoria (aparece tudo) */
+  const [categoria, setCategoria] = useState(null);
+
+  const aplicarFiltro = (event) => {
+    /* Capturamos (após o clique) o texto escrito em cada botão */
+    const categoriaSelecionada = event.currentTarget.innerText;
+
+    /* E em seguida passamos este texto para o state de categoria */
+    setCategoria(categoriaSelecionada);
   };
 
-  const exemplo3 = (value) => {
-    alert("Exemplo 3 - " + value);
-  };
   return (
     <StyleMain>
       <h2>Conteúdo da aplicação</h2>
-      <button onClick={exemplo2}>Exemplo 2</button>
-      <br />
-      <button
-        onClick={() => {
-          exemplo3("Sou Pai");
-        }}
-      >
-        Exemplo 3 - Acionando o evento/função através do conteudo (pai)
-      </button>
+
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
         magnam quo ducimus dolores, necessitatibus earum sit at rem, qui,
         impedit voluptatibus inventore temporibus pariatur quidem! Accusantium
         architecto veritatis velit rerum?
       </p>
+
+      <div className="filtros">
+        <p>
+          <b>Filtrar por: </b>
+          <button onClick={aplicarFiltro}>Front-end</button>
+          <button onClick={aplicarFiltro}>Back-end</button>
+          <button onClick={aplicarFiltro}>Design</button>
+        </p>
+
+        {/* Renderização Condicional o texto/tag/componente somente será renderizaso/exibido se o state categoria existir (ou seja,não é null,undefined,false) */}
+        {categoria && (
+          <p>
+            Você escolheu: <b>{categoria}</b>
+          </p>
+        )}
+      </div>
+
       <div className="artigos">
         {cursos.map((curso) => {
           return (

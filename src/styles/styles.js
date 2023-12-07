@@ -40,7 +40,16 @@ export const StyleMain = styled.main`
   p {
     padding: 0.5rem 0;
   }
+  .filtros {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+  }
 
+  .filtros button {
+    margin: 0.5rem;
+  }
   @media screen and (min-width: 650px) {
     .artigos {
       display: flex;
