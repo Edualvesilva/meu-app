@@ -1,10 +1,10 @@
 import { StyleMain } from "../styles/styles.js";
-import Artigo from "./Artigo";
+import Artigo from "./Artigo.jsx";
 
 import cursos from "../api/cursos.js";
 import { useState } from "react";
 
-function Conteudo() {
+function Cursos() {
   /* Criando gerenciador de state para mudanças de categorias. Inicialmente começa como null pois ainda não temos uma escolha/seleção de categoria (aparece tudo) */
   const [categoria, setCategoria] = useState(null);
 
@@ -83,4 +83,4 @@ function Conteudo() {
     </StyleMain>
   );
 }
-export default Conteudo;
+export default Cursos;

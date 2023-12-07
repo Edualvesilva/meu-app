@@ -1,4 +1,5 @@
+import Cursos from "../components/Cursos";
 function Home() {
-  return <h2>Bem-Vindo!</h2>;
+  return <Cursos />;
 }
 export default Home;
