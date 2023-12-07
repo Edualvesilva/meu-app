@@ -26,6 +26,8 @@ function Conteudo() {
     return curso.categoria === categoria || categoria === null;
   });
 
+  const quantidade = cursosFiltrados.length;
+
   return (
     <StyleMain>
       <h2>Conteúdo da aplicação</h2>
@@ -44,11 +46,20 @@ function Conteudo() {
           <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
           <button onClick={aplicarFiltro}>Mobile</button>
+          <button onClick={aplicarFiltro}>Jogadores mais fodas do mundo</button>
           {categoria && (
             <button onClick={limparFiltro}>🧹 Limpar Filtro</button>
           )}
         </p>
-
+        <p>
+          Quantidade de Cursos: <b>{quantidade}</b>
+        </p>
+        {/* Se quantidade for zero (ou seja, não tem cursos da categoria filtrada), então mostre a mensage, */}
+        {quantidade == 0 && (
+          <p style={{ color: "red", textAlign: "center" }}>
+            Não há cursos desta categoria!
+          </p>
+        )}
         {/* Renderização Condicional o texto/tag/componente somente será renderizaso/exibido se o state categoria existir (ou seja,não é null,undefined,false) */}
         {categoria && (
           <p>
