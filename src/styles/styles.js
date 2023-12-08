@@ -27,6 +27,11 @@ export const StyledMenu = styled.nav`
       background-color: pink;
     }
   }
+
+  .active {
+    background-color: white;
+    color: black;
+  }
 `;
 
 export const StyleCursos = styled.section`
