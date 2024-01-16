@@ -1,34 +1,47 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import { useState } from "react";
+import imagemLoading from "../assets/loading.svg";
 function DetalhesProduto() {
-  /* Usamos o Hook useParams do React Router DOM para ter acesso aos parâmetros da rota dinâmica neste caso,o parâmetro chamado "id". */
+  const [produto, setProduto] = useState({});
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
     const carregarDados = async () => {
       try {
-        const resposta = await fetch(
-          `'https://fakestoreapi.com/products/${id}`
-        );
+        const resposta = await fetch(`https://fakestoreapi.com/products/${id}`);
         const dados = await resposta.json();
+        setProduto(dados);
+        setLoading(false);
       } catch (error) {
         console.error("Erro ao carregar produto: " + error);
       }
     };
+    carregarDados();
   }, [id]);
+
   return (
     <article>
-      <h2>Titulo</h2>
-      <p>
-        <b>Categoria: </b> categoria...
-      </p>
-      <p>
-        <b>Preço: </b> preco...
-      </p>
-      <p>Descrição: </p>
-      <p>
-        <img src="" alt="" />
-      </p>
+      {loading ? (
+        <p style={{ textAlign: "center" }}>
+          <img src={imagemLoading} alt="Carregando.." />
+        </p>
+      ) : (
+        <div>
+          <h2>{produto.title}</h2>
+          <p>
+            <b>Categoria: </b> {produto.category}
+          </p>
+          <p>
+            <b>Preço: </b> {produto.price}
+          </p>
+          <p>Descrição: {produto.description}</p>
+          <p>
+            <img style={{ width: "300px" }} src={produto.image} alt="" />
+          </p>
+        </div>
+      )}
     </article>
   );
 }
