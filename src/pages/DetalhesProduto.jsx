@@ -1,4 +1,8 @@
+import { useParams } from "react-router-dom";
+
 function DetalhesProduto() {
+  const { id } = useParams();
+  console.log(id);
   return (
     <article>
       <h2>Titulo</h2>
